@@ -12,10 +12,15 @@ Arduino ---> ESP8266 Board
 3.3V (must supply 300-500 mA try but likely need external regulator) ---> VCC
 GND ---> GND
 3.3 V ---> CH_PD / Enable
-RX (pin 0) ---> TX
-TX (pin 1) ---> RX (make sure 3.3 V may require level shift)
+RX software (pin 2) ---> TX
+TX software (pin 3) ---> RX (make sure 3.3 V may require level shift)
 
 
 Libraries
 PubSubClient (MQTT Client)
 WiFiEspAT
+SoftwareSerial
+
+
+
+Note:  Uno's only support serial so need to use softwareserial
